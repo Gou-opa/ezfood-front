@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,800|Slabo+13px&subset=latin-ext,vietnamese');
+*{margin: 0px; padding: 0px}
+
+body {
+    background-color: #f6f6f6 !important;
+    font-family: sans-serif;
+}
+
+p.dropdown-title {
+    margin: 8px;
+    border-bottom: 1px solid #b9b9b9;
+}
+
+#nav_menu {
+    height: 56px;
+    margin-bottom: 25px;
+    display: flex;
+    background-color: #ff706a;
+    color: white;
+    padding: 10px 22px;
+    box-shadow: 2px 2px 14px grey;
+}
+#nav_menu .nav_list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0px;
+}
+#nav_menu .nav_list .nav_item {
+    margin: 0 0.5rem;
+}
+#nav_logo img{
+    width:  103px;
+    height: 101px;
+}
+#nav_avatar {
+    position: absolute;
+    right: 2rem;
+}
+#nav_logo {
+    font-size: 30px;
+    font-family: initial;
+    font-weight: bold;
+    cursor: pointer;
+}
+i.fa.fa-bars {
+    font-size: 30px;
+    cursor: pointer;
+}
+i.fa.fa-sort-desc {
+    font-size: 30px;
+    cursor: pointer;
+    position: relative;
+    left: 5px;
+}
+
+h1{
+    margin: 0px;
+}
+#nav_avatar img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
+}
+#nav_menu .dropdown-avatar {
+    position: absolute;
+    top :120%;
+    transform-origin: 50% 0;
+    transform: scaleY(0);
+    transition: 200ms;
+    background: white;
+    color: black;
+    width: 120px;
+    right: -1rem;
+    list-style: none;
+    box-shadow: 0 4px 10px rgb(216, 206, 206);
+    text-align: center;
+    z-index: 1;
+}
+
+#nav_menu .dropdown-avatar.active{
+    display: block;
+    transform: scaleY(1);
+}
+#nav_menu .dropdown-avatar::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    right: 0.6em;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px;
+    border-color: transparent;
+    border-bottom-color: white;
+}
+li.dropdown-content {
+    padding: 4px 12px;
+}
+li.dropdown-content a {
+    text-decoration: none;
+    color: black;
+}
+li.dropdown-content:hover{
+    background-color: #ffc1078a;
+    cursor: pointer;
+}
+
+#menu .dropdown-avatar p.dropdown-title {
+    margin-top: 6px;
+    border-bottom: 1px solid rgb(177, 172, 172);
+}
+
+/* start left_menu */
+
+#left_menu {
+    position: absolute;
+    background : white;
+    width: 200px;
+    top: 62px;
+    left: -200px;
+    bottom: 1.5%;
+    box-shadow: 0px 2px 14px rgb(218, 216, 216);
+    border-radius: 3px;
+    transition: 200ms;
+    z-index: 1;
+}
+
+#left_menu.active {
+    left: 0px;
+    transition: 200ms;
+    z-index: 1;
+}
+#left_menu .menu_list li {
+    padding: 10px;
+    border-bottom: 1px solid #80808042;
+}
+#left_menu .menu_list li:hover {
+    background-color: #ffc1078a;
+}
+#left_menu .menu_list li a {
+    text-decoration: none;
+    color:black;
+}
+.hideAvatarEdit{
+    display: none;
+}
+.AddAvatar{
+    padding-top: 1em;
+    background: white;
+    border-radius: 5vh;
+    height: 22em;
+    width: 19em;
+    box-shadow: 0px 0px 8px gray;
+    top: calc(50% - 10em);
+    left: calc(50% - 10em);
+    position: absolute;
+    z-index: 100;
+}
+.AddAvatar .closeBT{
+    border-radius: 0.5em;
+    margin-right:0.5em;
+    margin-top: -0.5em;
+    height: 2em;
+    width: 2em;
+    float: right;
+    background: red;
+    color: wheat;
+    font-weight: bold;
+}
+.AddAvatar .closeBT:hover{
+    cursor: pointer;
+}
+.AddAvatar .imgPreview
+  {
+    background: #ECECEC;
+    text-align: center;
+    margin:1em auto;
+    height: 12rem;
+    width: 12rem;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    border-top: 5px solid gray;
+    border-bottom: 5px solid gray;
+  }
+.AddAvatar  img
+    {
+    height: 100%;
+    width: 100%;
+    }
+  
+.AddAvatar .fileInput
+  {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+    
+  }
+.AddAvatar  .label-avatar{
+    border: 3px solid #ff706a;
+    border-radius: 5px;
+}
+ 
+.AddAvatar .submitButton{
+    color: gray;
+    border-radius: 2vh;
+    background: #ffffff;
+    border:1vh solid #FFC8C8;
+    margin-top: 1vh;
+    height:3em;
+    width: 10em;
+    font-size: 2.5vh;
+    font-weight: bold;
+    transition: all 0.3s;
+
+}
+.AddAvatar .submitButton:hover{
+    color: black;
+    cursor: pointer;
+    border:1vh solid #FF706A;
+    background: rgb(243, 222, 222);
+}
