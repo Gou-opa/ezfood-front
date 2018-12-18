@@ -5,7 +5,7 @@ set -e
 apt-get update
 
 # add nodejs to yum
-curl --silent --location https://rpm.nodesource.com/setup_10.x | sudo bash -
+curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
 apt install nodejs -y #default-jre ImageMagick
 
 # install pm2 module globaly
