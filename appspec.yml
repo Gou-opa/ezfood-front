@@ -23,6 +23,10 @@ hooks:
     - location: deployscript/run.sh
       timeout: 120
       runas: ubuntu
+  ApplicationStop:
+    - location: deployscript/stopcmmd.sh
+      timeout: 120
+      runas: root
   ValidateService:
     - location: deployscript/validate.sh
       timeout: 60
