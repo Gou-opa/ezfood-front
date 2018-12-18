@@ -1,0 +1,37 @@
+version: 0.2
+
+#env:
+  #variables:
+     # key: "value"
+     # key: "value"
+  #parameter-store:
+     # key: "value"
+     # key: "value"
+
+phases:
+  install:
+    commands:
+       - npm install
+      # - command
+  pre_build:
+    commands:
+       - echo ready to build
+      # - command
+  build:
+    commands:
+       - npm run build
+      # - command
+  post_build:
+    commands:
+       - echo ready to serve
+      # - command
+artifacts:
+  files:
+    - '**/*'
+    # - location
+  name: Tien-ezfront-artifact 
+  #discard-paths: yes
+  #base-directory: location
+#cache:
+  #paths:
+    # - paths
